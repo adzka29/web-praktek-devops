@@ -2,18 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Web DevOps Sabrina</title>
+    <title>Web Sekolah</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1 class="animate-header">Halo, Sabrina!</h1>
+        <div class="logo">🏫 SMKN 1 Contoh</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#profil">Profil</a>
+            <a href="#data">Data</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
     </header>
 
-    <main>
-        <button id="loveBtn">Tekan Aku</button>
-        <p id="loveText"></p>
-    </main>
+    <section id="home">
+        <h1>Selamat Datang di SMKN 1 Contoh</h1>
+        <button id="welcomeBtn">Klik Aku!</button>
+        <p id="welcomeText"></p>
+    </section>
+
+    <section id="profil">
+        <h2>Profil Sekolah</h2>
+        <p>SMKN 1 Contoh adalah sekolah yang unggul dalam pendidikan teknologi dan kreatifitas.</p>
+    </section>
+
+    <section id="data" class="cards">
+        <div class="card">
+            <h3>Jumlah Siswa</h3>
+            <p>450</p>
+        </div>
+        <div class="card">
+            <h3>Jumlah Guru</h3>
+            <p>35</p>
+        </div>
+        <div class="card">
+            <h3>Kelas</h3>
+            <p>12</p>
+        </div>
+    </section>
+
+    <section id="kontak">
+        <h2>Kontak Sekolah</h2>
+        <p>Email: info@smkn1contoh.sch.id</p>
+        <p>Telp: 021-1234567</p>
+    </section>
+
+    <footer>
+        <p>© 2025 SMKN 1 Contoh</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

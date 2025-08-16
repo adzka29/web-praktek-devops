@@ -1,15 +1,14 @@
-const loveBtn = document.getElementById("loveBtn");
-const loveText = document.getElementById("loveText");
+const welcomeBtn = document.getElementById("welcomeBtn");
+const welcomeText = document.getElementById("welcomeText");
 
-function showLove() {
-    loveText.textContent = "I Love You 💖";
-    loveText.style.opacity = 1;
+function showWelcome() {
+    welcomeText.textContent = "Selamat Datang di SMKN 1 Contoh! 🎉";
+    welcomeText.style.opacity = 1;
 
     setTimeout(() => {
-        loveText.style.opacity = 0;
-    }, 2000);
+        welcomeText.style.opacity = 0;
+    }, 3000);
 }
 
-// Klik atau touch
-loveBtn.addEventListener("click", showLove);
-loveBtn.addEventListener("touchstart", showLove);
+welcomeBtn.addEventListener("click", showWelcome);
+welcomeBtn.addEventListener("touchstart", showWelcome);

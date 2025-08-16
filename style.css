@@ -1,35 +1,52 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f0ff;
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
 }
 
 header {
-    padding: 50px 0;
+    background-color: #6a0dad;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.animate-header {
-    font-size: 36px;
-    color: #6a0dad;
-    animation: fadeInDown 1.5s ease forwards;
+header .logo {
+    font-size: 20px;
+    font-weight: bold;
 }
 
-@keyframes fadeInDown {
-    0% { opacity: 0; transform: translateY(-50px);}
-    100% { opacity: 1; transform: translateY(0);}
+header nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
 }
 
 button {
     padding: 12px 24px;
     font-size: 16px;
-    margin: 20px 0;
-    cursor: pointer;
     background-color: #ff69b4;
     color: white;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -37,7 +54,8 @@ button:hover {
     background-color: #ff1493;
 }
 
-#loveText {
+#welcomeText {
+    margin-top: 20px;
     font-size: 24px;
     color: #ff4500;
     opacity: 0;
@@ -46,23 +64,26 @@ button:hover {
 
 .cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 40px;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .card {
     background-color: #d9b3ff;
-    color: #4b0082;
     padding: 20px;
     border-radius: 10px;
     width: 150px;
     font-weight: bold;
     transition: transform 0.3s;
-    cursor: pointer;
 }
 
 .card:hover {
     transform: translateY(-10px);
+}
+
+footer {
+    background-color: #6a0dad;
+    color: white;
+    padding: 20px;
 }
