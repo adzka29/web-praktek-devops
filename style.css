@@ -5,9 +5,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f4f8;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f0ff, #e0e0ff);
     color: #333;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -17,10 +18,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation: slideDown 1s ease forwards;
 }
 
 header .logo {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -28,33 +33,49 @@ header nav a {
     color: white;
     margin-left: 20px;
     text-decoration: none;
-}
-
-header nav a:hover {
-    text-decoration: underline;
-}
-
-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-button {
-    padding: 12px 24px;
-    font-size: 16px;
-    background-color: #ff69b4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
     transition: 0.3s;
 }
 
-button:hover {
-    background-color: #ff1493;
+header nav a:hover {
+    color: #ff69b4;
 }
 
-#welcomeText {
+@keyframes slideDown {
+    0% { transform: translateY(-100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+button.animate-btn {
+    padding: 14px 28px;
+    font-size: 16px;
+    margin: 20px 0;
+    cursor: pointer;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+button.animate-btn:hover {
+    background-color: #ff1493;
+    transform: scale(1.1);
+}
+
+.animate-text {
     margin-top: 20px;
     font-size: 24px;
     color: #ff4500;
@@ -69,17 +90,19 @@ button:hover {
     flex-wrap: wrap;
 }
 
-.card {
+.card.animate-card {
     background-color: #d9b3ff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 150px;
+    padding: 25px;
+    border-radius: 12px;
+    width: 160px;
     font-weight: bold;
-    transition: transform 0.3s;
+    transition: transform 0.5s, box-shadow 0.5s;
+    cursor: pointer;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.card.animate-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 footer {
