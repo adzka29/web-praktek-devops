@@ -1,21 +1,32 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
 }
+
+.container {
+    text-align: center;
+}
+
 button {
     padding: 10px 20px;
     font-size: 16px;
-}
-.btn-welcome {
-    background-color: #3498db;
+    cursor: pointer;
+    background-color: #ff69b4;
     color: white;
-    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-}
-.btn-welcome:hover {
-    background-color: #2980b9;
 }
 
+button:hover {
+    background-color: #ff1493;
+}
+
+#loveText {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #ff4500;
+}

@@ -1,3 +1,6 @@
-function sayHi() {
-    alert("Halo! Kamu mulai belajar DevOps web!");
-}
+const loveBtn = document.getElementById("loveBtn");
+const loveText = document.getElementById("loveText");
+
+loveBtn.addEventListener("click", () => {
+    loveText.textContent = "I Love You 💖";
+});
